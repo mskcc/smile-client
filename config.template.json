@@ -1,0 +1,11 @@
+{
+    "NATS_URL": "<nats-url>",
+    "NATS_USERNAME": "<nats-username>",
+    "NATS_PASSWORD": "<nats-password>",
+    "NATS_SSL_CERTFILE": "</path/to/cert.pem>",
+    "NATS_SSL_KEYFILE": "</path/to/key.pem",
+    "NATS_ROOT_CA": "</path/to/root-ca.pem>",
+    "NATS_FILTER_SUBJECT": "MDB_STREAM.consumers.*",
+    "NATS_DURABLE": "<nats-durable>",
+    "CALLBACK": "smile_client.default_callback.smile_callback"
+}
