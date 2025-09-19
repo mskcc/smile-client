@@ -228,13 +228,7 @@ smile_client/
 
 ### Running Tests
 
-```bash
-# Install test dependencies
-pip install pytest pytest-asyncio
-
-# Run tests
-pytest tests/
-```
+TODO: Add this
 
 ### Code Style
 
