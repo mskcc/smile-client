@@ -1,4 +1,4 @@
-from smile_client import __VERSION__
+from smile_client.version import __VERSION__
 from setuptools import setup, find_packages
 
 
