@@ -26,7 +26,7 @@ setup(
     description="Python Library for SMILE",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mskcc/echo-client",
+    url="https://github.com/mskcc/smile-client",
     packages=find_packages(),
     install_requires=read_requirements(),
     classifiers=[
