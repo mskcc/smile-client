@@ -1,3 +1,4 @@
+from smile_client import __VERSION__
 from setuptools import setup, find_packages
 
 
@@ -19,13 +20,13 @@ def read_readme():
 
 setup(
     name="smile_client",
-    version="0.1.0",
+    version=__VERSION__,
     author="MSK CMO",
     author_email="ivkovics@mskcc.org",
     description="Python Library for SMILE",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mskcc/echo-client",
+    url="https://github.com/mskcc/smile-client",
     packages=find_packages(),
     install_requires=read_requirements(),
     classifiers=[

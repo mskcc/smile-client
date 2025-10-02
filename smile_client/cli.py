@@ -19,6 +19,7 @@ import logging
 import asyncio
 import datetime
 from docopt import docopt
+from smile_client import __VERSION__
 from .smile_client import SmileClient
 
 
@@ -58,12 +59,16 @@ def main():
     if arguments["--debug"]:
         logging.getLogger().setLevel(logging.DEBUG)
 
+    if arguments["--version"]:
+        logging.info(__VERSION__)
+        exit(0)
+
     if arguments['start_listener']:
         config_file = arguments['--config']
         subject = arguments['--subject']
         start_date = arguments['--start-date']
         start_listener(config_file, subject, start_date)
-
+        exit(0)
 
 if __name__ == "__main__":
     main()
