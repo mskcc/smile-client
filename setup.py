@@ -1,5 +1,11 @@
-from smile_client.version import __VERSION__
 from setuptools import setup, find_packages
+import os
+
+def get_version():
+    version_file = os.path.join(os.path.dirname(__file__), 'smile_client', 'version.py')
+    with open(version_file, 'r') as f:
+        exec(f.read())
+    return locals()['__VERSION__']
 
 
 def read_requirements():
@@ -20,7 +26,7 @@ def read_readme():
 
 setup(
     name="smile_client",
-    version=__VERSION__,
+    version=get_version(),
     author="MSK CMO",
     author_email="ivkovics@mskcc.org",
     description="Python Library for SMILE",
