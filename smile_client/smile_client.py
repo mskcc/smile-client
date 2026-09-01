@@ -5,6 +5,7 @@ import logging
 import asyncio
 import signal
 from django.conf import settings
+from asgiref.sync import sync_to_async
 from importlib import import_module
 
 from nats.js.api import ConsumerConfig, DeliverPolicy
@@ -163,7 +164,7 @@ class SmileClient(object):
             logger.info("Starting consumer...")
 
             async for msg in self.sub.messages:
-                wrapped_callback(msg)
+                await sync_to_async(wrapped_callback, thread_sensitive=True)(msg)
                 await msg.ack()
 
         logger.info("Shutdown event received, stopping consumer...")
