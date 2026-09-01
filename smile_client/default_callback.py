@@ -1,4 +1,3 @@
-import json
 import logging
 
 from smile_client.messages.smile_message import SmileMessage
